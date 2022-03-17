@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.ealanta'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.google.code.gson:gson:2.9.0'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.github.docker-java:docker-java:3.2.13'
+	implementation 'com.github.docker-java:docker-java-transport-httpclient5:3.2.13'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
