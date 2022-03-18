@@ -1,14 +1,11 @@
 pipeline {
     agent {
-        docker { 
-            image 'davidxhay/jenkins-gradle-jdk17'
-        }
+        docker { image 'node:16.13.1-alpine' }
     }
     stages {
-        stage('Build and Test') {
+        stage('Test') {
             steps {
-                sh 'whoami'
-                sh 'id'
+                sh 'node --version'
             }
         }
     }
