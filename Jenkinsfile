@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Build and Test') {
             steps {
-                sh 'curl -s --unix-socket /var/run/docker.sock http://localhost/version'
+                sh 'whoami'
+                sh 'id'
             }
         }
     }
